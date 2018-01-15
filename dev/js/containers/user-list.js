@@ -30,7 +30,7 @@ function mapStateToProps(state) {
     users: state.users
   }
 }
-function matchDispatchToProps (dispatch) {
-  return bindActionCreators({selectUser: selectUser, dispatch})
+function matchDispatchToProps(dispatch){
+  return bindActionCreators({selectUser: selectUser}, dispatch)
 }
 export default connect(mapStateToProps, matchDispatchToProps)(UserList);
